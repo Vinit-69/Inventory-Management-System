@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgray;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .main-container{
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border: 0px;    
+            border-radius: 10px;
+            width:80%;
+            padding:20px;
+            max-width: 1050px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .img-container{
+            flex: 1;
+        }
+        .img-container img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .login-container{
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .login-container h1{
+            font-weight: 800;
+            margin: 20px;
+        }
+        .login-container form{
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container form input{
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 0px;
+            border-bottom: 1px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container form button{
+            border: 0px;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: khaki;
+            border-radius: 5px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .login-container form button:hover{
+            background-color: darkkhaki;
+        }
+        .forgot-pass{
+            text-align: center;
+        }
+        .forgot-pass a{
+            text-decoration: none;
+            color:black;
+            border-bottom:1px solid black;
+        }
+        .create-account{
+            text-align: center;
+            margin-top: 100px;
+        }
+        .create-account a{
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "main-container">
+        <div class="img-container">
+            <img src="warehouse.jpg" alt="Image Not Found" width="800" height="800">
+        </div>
+
+        <div class="login-container">
+        <h1>Login</h1>
+        <form>
+            <input type="email" required placeholder="Email">
+            <br>
+            <input type="password" required placeholder="Password"> 
+            <br>
+            <button type="submit">Login</button>      
+            <br>
+            <label class="forgot-pass"><a href>Forgot Passsword?</a></label> 
+            <label class="create-account"><a href="#">Create your account -></a></label>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
