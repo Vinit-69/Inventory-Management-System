@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot-Password-Page</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top right, lightblue, darkblue);
+        }
+        .main-container{
+            border: 0px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            width: 60%;
+            height: 55%;
+            background-color: white;
+            padding: 20px;
+            max-width: 1050px;
+            max-height: 1050px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .img-container{
+            flex: 1;
+        }
+        .img-container img{
+            display: block;
+            object-fit: cover;
+        }
+        .form-container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex: 1;
+            padding:20px;
+        }
+        .form-container h1{
+            font-weight: 700;
+            margin: 20px;
+        }
+        .form-container form{
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+        }
+        .form-container form input{
+            border: 0px;
+            border-bottom: 1px solid blue;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .reset{
+            padding: 10px;
+            background: linear-gradient(to right, orange, darkorange);
+            color: white;
+            border: 0px;
+            border-radius: 2px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .reset:hover{
+            background: linear-gradient(to right, darkorange, orange);
+        }
+        .signin{
+            padding: 10px;
+            color:gray;
+            background-color: white;
+            border: 0px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .signin:hover{
+            color: gray;
+            background-color: lightgray;
+        }
+        .empty{
+            padding: 20px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="img-container">
+            <img src="forgotPasswordImage.png" alt="Image Not Found" height="400" width="400">
+        </div>
+        <div class="form-container">
+            <h1>Forgot Your Password?</h1>
+            <form>
+                <input type="email" required placeholder="Email Address" id="email">
+                <button class="reset">Reset Password</button>
+                <button class="signin">Back to Signin</button>
+                <div id="empty">
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let emptyField = document.getElementById("empty");
+        let emailInput = document.getElementById("email");
+        let button = document.getElementsByClassName("reset")[0];
+        button.addEventListener("click", function(){
+            event.preventDefault();   
+            let email = emailInput.value;
+            if(email){
+            emptyField.innerHTML = `We've sent a link to your email address ${email}, click on that link to reset your password.`;
+            }
+            else{
+                emptyField.innerHTML = `Please enter a valid email address.`;
+            }
+        });
+    </script>
+</body>
+</html>
