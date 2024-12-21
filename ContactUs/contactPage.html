@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:linear-gradient(to top right, lightgray, gray);
+            height: 100vh;
+            overflow: hidden;
+        }
+        .main-container{
+            display: flex;
+            flex-direction: row;
+            background:linear-gradient(to top right, white, rgb(237, 232, 232));
+            border:0px;
+            border-radius: 10px;
+            width: 70%;
+            height: 70%;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            position: relative;
+        }
+        .heading{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 15px;
+        }
+        .form-container{
+            justify-content: center;
+            width: 70%;
+            height: 70%;
+            border: 1px solid black;
+            border-radius: 2px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+        .form-container h2{
+            margin-left: 10px;
+        }
+        .form-container input{
+            background-color: rgb(223, 223, 223);
+            padding: 15px;
+            margin: 15px;
+            border: none;
+        }
+        .form-container input:hover{
+            transition:0.2s ease-in-out;
+            transform: scale(1.15);
+        }
+        .form-container input:focus{
+            box-shadow: 0 0 10px rgba(0, 123, 123, 0.7);
+        }
+        .form-container textarea{
+            resize: none;
+            background-color: rgb(223, 223, 223);
+            border: none;
+            padding: 15px;
+            margin: 15px;
+        }
+        .form-container textarea:hover{
+            transition:0.2s ease-in-out;
+            transform:scale(1.15);
+        }
+        .form-container textarea:focus{
+            box-shadow: 0 0 10px rgba(0, 123, 123, 0.7);
+        }
+        .form-container button{
+            border: 0px;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: lightblue;
+            border-radius: 5px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .form-container button:hover{
+            background-color: rgb(0, 187, 255);
+        }
+        .main-container a{
+            text-decoration: none;
+            padding: 5px;
+            margin: 5px;
+            color: gray;
+            border-left: 1px solid black;
+        }
+        .panel{
+            position:absolute;
+            top:10px;
+            right:10px;
+        }
+        .panel a{
+            padding: 10px;
+            margin:15px;
+            text-decoration: none;
+            border-radius: 2px;
+            border:none;    
+        }
+        .panel a:hover{
+            background-color: white;
+        }
+        #Home{
+            background-color: lightblue;
+            color: white;
+        }
+        #Home:hover{
+            background-color: rgb(0, 187, 255);
+        }
+        .contacts:hover{
+            background-color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="panel">
+            <span class="panel"><a href="#">Login</a><a href="#" id="Home">Home</a></span>
+        </div>
+        <div class="heading">
+        <h1>Contact Us</h1>
+        Need to get in contact with us? Either fill out the form with your inquiry or contact us here:-
+        <a href="#" class="contacts">Email</a>
+        <a href="#" class="contacts">Instagram</a>
+        <a href="#" class="contacts">Phone Contact</a>
+        </div>
+        <div class="form-container">
+            <h2>Inquiry Form</h2>
+            <span><input type="text" placeholder="First name*"><input type="text" placeholder="Last name"></span>
+            <input type="email" placeholder="Email Address">
+            <textarea placeholder="What can we help you with?"></textarea>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
