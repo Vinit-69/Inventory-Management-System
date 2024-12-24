@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <h1>StockSmart</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+    </nav>
+    <div class="auth-buttons">
+      <button>Login</button>
+      <button>Sign Up</button>
+    </div>
+  </header>
+  <div class="container">
+    <div class="form-section">
+      <h2>Add New Product</h2>
+      <div class="form-group">
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name">
+      </div>
+      <div class="form-group">
+        <label for="product-category">Category:</label>
+        <select id="product-category">
+          <option style="opacity: 0.5;" disabled selected>Choose product-category</option>
+          <option value="Food and Beverages">Food and Beverages</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="product-stock">Stock:</label>
+        <input type="number" id="product-stock">
+      </div>
+      <div class="form-group">
+        <label for="product-description">Description:</label>
+        <input type="text" id="product-description">
+      </div>
+      <div class="form-group">
+        <button onclick="addProduct()">Add Product</button>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Manage Sales</h2>
+      <div class="form-group">
+        <label for="sale-product-name">Product Name:</label>
+        <input type="text" id="sale-product-name">
+      </div>
+      <div class="form-group">
+        <label for="sale-quantity">Quantity Sold:</label>
+        <input type="number" id="sale-quantity">
+      </div>
+      <div class="form-group">
+        <button onclick="updateStock()">Record Sale</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-list">
+    <h2>Product List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Stock</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="product-table"></tbody>
+    </table>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
