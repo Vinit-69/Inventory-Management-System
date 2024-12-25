@@ -65,21 +65,94 @@
             border-radius: 5px;
             font-size: 16px;
             font-weight: 700;
-            background-color: lightgreen;
+            background-color: #007bff;
             color: white;
             margin-top: 10px;
             cursor: pointer;
         }
+<<<<<<< HEAD:signupPage.html
         .signup-container form button:hover {
             background-color: green;
+=======
+        .signup-container form button:hover{
+            background-color: #0056b3;
+>>>>>>> dbfe820abc1bfa758777dce13b357a17a4ddaa14:Signup/signupPage.html
         }
         .account {
             margin: 10px;
             padding: 10px;
         }
+<<<<<<< HEAD:signupPage.html
+=======
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+  
+        header h1 {
+         margin: 0;
+            font-size: 24px;
+        }
+  
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+  
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+  
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+  
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+  
+        .auth-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  
+        .auth-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+>>>>>>> dbfe820abc1bfa758777dce13b357a17a4ddaa14:Signup/signupPage.html
     </style>
 </head>
 <body>
+    <header>
+        <h1>StockSmart</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Contact Us</a>
+          <a href="#">About Us</a>
+        </nav>
+        <div class="auth-buttons">
+          <button>Login</button>
+          <button>Sign Up</button>
+        </div>
+      </header>
     <div class="main-container">
         <div class="img-container">
             <img src="inventory.png" alt="Image Not Found" width="500" height="500">
@@ -88,6 +161,7 @@
             <h1>Sign Up</h1>
             <label>Please fill this form to create an account</label>
             <br>
+<<<<<<< HEAD:signupPage.html
             <form id="signup-form" method="POST" action="/register">
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="email" name="email" placeholder="Email" required>
@@ -95,8 +169,35 @@
                 <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
                 <button type="submit">Create Account</button>
                 <label class="account">Already have an account? <a href="/loginPage.html">Sign in</a></label>
+=======
+            <form>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <span><input type="checkbox" id="termsCheckBox"><label>I have read and agree to the <a href="#">Terms of Service.</a></label></span>
+            <div id="empty"><p id="warning" style="display: none;">Please agree to the Terms of Service to create an account</p></div>
+            <button type="submit" id="submitButton">Create Account</button>
+            <label class="account">Already have an account? <a href="#">Sign in</a></label>
+>>>>>>> dbfe820abc1bfa758777dce13b357a17a4ddaa14:Signup/signupPage.html
             </form>
         </div>
     </div>
+    <script>
+        const termsCheckBox = document.getElementById('termsCheckBox');
+        const submitButton = document.getElementById('submitButton');
+        const warning = document.getElementById('warning');
+    
+        termsCheckBox.addEventListener('change', function() {
+            if (termsCheckBox.checked) {
+                submitButton.disabled = false;
+                warning.style.display = 'none';
+            } else {
+                submitButton.disabled = true;
+                warning.style.display = 'block';
+            }
+        });
+    </script>
+    
 </body>
 </html>

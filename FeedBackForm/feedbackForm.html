@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback-Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            background-color: lightgray;
+        }
+        .main-container{
+            width: 95%;
+            height: 100%;
+            border: 0px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        .heading{
+            border: 0px;
+            border-radius: 5px;
+            width:100%;
+            background-color: #007bff;
+            color:white;
+        }
+        .heading h1{
+            margin:15px;
+        }
+        .form-container{
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container input{
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .form-container label{
+            margin: 10px;
+        }
+        .labelText{
+            color: #0056b3;
+        }
+        #star{
+            color: red;
+        }
+        .button{
+            color: white;
+            background-color: #007bff;
+            width: 10%;
+            padding: 5px;
+            border: 0px;
+            border-radius: 2px;
+        }
+        .button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="heading">
+            <h1>Website Feedback Form</h1>
+        </div>
+        <form class="form-container">
+            <label class="labelText">Enter Your Full Name <span id="star">*</span></label>
+            <input type="text">
+            <br>
+            <label class="labelText">Enter Your Email Address <span id="star">*</span></label>
+            <input type="text">
+            <br>
+            <label class="labelText">Is this the first time you have visited this website? <span id="star">*</span></label>
+            <span><input type="radio" name="first-time" value="yes"><label class="labelText">Yes</label></span>
+            <span><input type="radio" name="first-time" value="no"><label class="labelText">No</label></span>
+            <br>
+            <label class="labelText">What is the PRIMARY reason you came to this website?</label>
+            <textarea ></textarea>
+            <br>
+            <label class="labelText">Did you find the website useful to your business/personal use? <span id="star">*</span></label>
+            <span><input type="radio" name="useful" value="all"> <label class="labelText"> Yes, all of it</label></span> 
+            <span><input type="radio" name="useful" value="some"> <label class="labelText"> Yes, some of it</label></span>
+            <span><input type="radio" name="useful" value="none"> <label class="labelText"> No, none of it</label></span>
+            <br>
+            <button type="submit" class="button">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

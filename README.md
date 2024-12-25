@@ -1,4 +1,5 @@
-Inventory Management System
+Stock Smart:
+Stock Smart is a practical and user-friendly inventory management website designed to help businesses efficiently track and manage their stock. It offers essential features like real-time inventory updates, reorder notifications, and basic reporting tools. The platform focuses on reducing manual effort and ensuring smooth inventory operations for businesses of all sizes.
 
 Backend Project
 

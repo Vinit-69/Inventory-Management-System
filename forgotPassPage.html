@@ -12,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(to top right, lightblue, darkblue);
+            background: #f4f4f4;
         }
         .main-container{
             border: 0px;
@@ -61,7 +61,7 @@
         }
         .reset{
             padding: 10px;
-            background: linear-gradient(to right, orange, darkorange);
+            background: #007bff;
             color: white;
             border: 0px;
             border-radius: 2px;
@@ -69,7 +69,7 @@
             margin-top: 5px;
         }
         .reset:hover{
-            background: linear-gradient(to right, darkorange, orange);
+            background: #0056b3;
         }
         .signin{
             padding: 10px;
@@ -88,11 +88,75 @@
             margin-top: 15px;
             font-weight: 500;
         }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+  
+        header h1 {
+         margin: 0;
+            font-size: 24px;
+        }
+  
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+  
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+  
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+  
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+  
+        .auth-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  
+        .auth-buttons button:hover {
+            background-color: #0056b3;
+        }
 
 
     </style>
 </head>
 <body>
+    <header>
+        <h1>StockSmart</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Contact Us</a>
+          <a href="#">About Us</a>
+        </nav>
+        <div class="auth-buttons">
+          <button>Login</button>
+          <button>Sign Up</button>
+        </div>
+      </header>
     <div class="main-container">
         <div class="img-container">
             <img src="forgotPasswordImage.png" alt="Image Not Found" height="400" width="400">
