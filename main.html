@@ -4,19 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventory Management System</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="/public/main.css">
+  <style>
+    .highlight {
+      background-color:grey; /* Subtle highlight color */
+      padding: 5px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>StockSmart</h1>
+    <h1 class="highlight">StockSmart</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Contact Us</a>
-      <a href="#">About Us</a>
+      <a href="/">Home</a>
+      <a href="/contactPage.html">Contact Us</a>
+      <a href="/termsPage.html">Terms</a>
+      <a href="/feedbackForm.html">Feedback</a>
     </nav>
-    <div class="auth-buttons">
-      <button>Login</button>
-      <button>Sign Up</button>
+    <div class="auth-buttons" id="auth-buttons">
+      <button onclick="window.location.href='/loginPage.html'">Login</button>
+      <button onclick="window.location.href='/signupPage.html'">Sign Up</button>
     </div>
   </header>
   <div class="container">
@@ -82,6 +90,18 @@
     </table>
   </div>
 
-  <script src="main.js"></script>
+  <script src="/public/main.js"></script>
+  <script>
+    // Check if user is logged in and update auth-buttons
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch('/auth-status')
+        .then(response => response.json())
+        .then(data => {
+          if (data.isLoggedIn) {
+            document.getElementById('auth-buttons').innerHTML = `<span class="highlight">${data.username}</span>`;
+          }
+        });
+    });
+  </script>
 </body>
 </html>

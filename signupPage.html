@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up</title>
     <style>
-        body{
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: lightgray;
             height: 100vh;
-            margin:0;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
         }
-        .main-container{
+        .main-container {
             background-color: white;
-            border: 0px;
+            border: 0;
             border-radius: 10px;
             width: 80%;
             height: 80%;
@@ -27,42 +27,41 @@
             flex-direction: row;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .img-container{
+        .img-container {
             flex: 1;
         }
-        .img-container img{
+        .img-container img {
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .signup-container{
+        .signup-container {
             padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             flex: 1;
         }
-        .signup-container h1{
+        .signup-container h1 {
             font-weight: 800;
             margin: 20px;
         }
-        .signup-container form{
+        .signup-container form {
             display: flex;
             flex-direction: column;
-
         }
-        .signup-container input{
+        .signup-container input {
             padding: 20px;
             margin-bottom: 15px;
-            border: 0px;
+            border: 0;
             border-bottom: 1px solid black;
             border-radius: 10px;
             cursor: pointer;
         }
-        .signup-container form button{
+        .signup-container form button {
             padding: 20px;
-            border: 0px;
+            border: 0;
             border-radius: 5px;
             font-size: 16px;
             font-weight: 700;
@@ -71,14 +70,13 @@
             margin-top: 10px;
             cursor: pointer;
         }
-        .signup-container form button:hover{
+        .signup-container form button:hover {
             background-color: green;
         }
-        .account{
+        .account {
             margin: 10px;
             padding: 10px;
         }
-
     </style>
 </head>
 <body>
@@ -90,14 +88,13 @@
             <h1>Sign Up</h1>
             <label>Please fill this form to create an account</label>
             <br>
-            <form>
-            <input type="text" placeholder="Username" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Create Account</button>
-            <label class="account">Already have an account? <a href="#">Sign in</a></label>
-            
+            <form id="signup-form" method="POST" action="/register">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Create Account</button>
+                <label class="account">Already have an account? <a href="/loginPage.html">Sign in</a></label>
             </form>
         </div>
     </div>
