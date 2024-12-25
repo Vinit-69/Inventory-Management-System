@@ -159,11 +159,28 @@
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Create Account</button>
+            <span><input type="checkbox" id="termsCheckBox"><label>I have read and agree to the <a href="#">Terms of Service.</a></label></span>
+            <div id="empty"><p id="warning" style="display: none;">Please agree to the Terms of Service to create an account</p></div>
+            <button type="submit" id="submitButton">Create Account</button>
             <label class="account">Already have an account? <a href="#">Sign in</a></label>
-            
             </form>
         </div>
     </div>
+    <script>
+        const termsCheckBox = document.getElementById('termsCheckBox');
+        const submitButton = document.getElementById('submitButton');
+        const warning = document.getElementById('warning');
+    
+        termsCheckBox.addEventListener('change', function() {
+            if (termsCheckBox.checked) {
+                submitButton.disabled = false;
+                warning.style.display = 'none';
+            } else {
+                submitButton.disabled = true;
+                warning.style.display = 'block';
+            }
+        });
+    </script>
+    
 </body>
 </html>
